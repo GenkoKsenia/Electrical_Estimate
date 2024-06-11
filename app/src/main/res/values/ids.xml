@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="area" type="id" />
+
+    <item name="sockets" type="id" />
+
+    <item name="material" type="id" />
+
+    <item name="buttonOk" type="id" />
+    <item name="buttonCancel" type="id" />
+</resources>

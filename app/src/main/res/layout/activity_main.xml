@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calculate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/addRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:onClick="addRow"
+                android:text="Добавить"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/delRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:text="Удалить"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/delAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_weight="1"
+                android:text="Очистить"
+                app:cornerRadius="0dp" />
+
+            <Button
+                android:id="@+id/calculater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="1"
+                android:text="Рассчитать"
+                app:cornerRadius="0dp" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/maintable"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:gravity="center"
+                    android:padding="0.5dp">
+
+                    <TableRow
+                        android:id="@+id/title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#000000"
+                        android:gravity="center|fill_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:backgroundTint="#FFFFFF"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:padding="4dp"
+                            android:text="№"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/type"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="6"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Наименование работ"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/measure"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="1"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Ед. Изм."
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/volume"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="2"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Объем"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/price"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="2"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Цена"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/total"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="0.5dp"
+                            android:layout_weight="2"
+                            android:background="#FFFFFF"
+                            android:gravity="center_vertical"
+                            android:padding="4dp"
+                            android:text="Сумма"
+                            android:textSize="15sp" />
+                    </TableRow>
+
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/totaltable"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#000000"
+                    android:paddingStart="1.25dp"
+                    android:paddingTop="0.5dp"
+                    android:paddingEnd="0.5dp"
+                    android:paddingBottom="0.5dp">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000000"
+                        android:gravity="right">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:width="800dp"
+                            android:background="#FFFFFF"
+                            android:gravity="right"
+                            android:padding="4dp"
+                            android:text="Итого:"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/totalSum"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="0.5dp"
+                            android:width="30dp"
+                            android:background="#FFFFFF"
+                            android:padding="4dp"
+                            android:textSize="15sp" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
